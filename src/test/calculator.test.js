@@ -20,5 +20,8 @@ describe('testing calculator functions', () => {
     test('dividing a with b', () => { 
         expect(calc.divide(8,4)).toBe(2)
     })
+    test('subtracting a from b with a < b', () => { 
+        expect(calc.subtract(1,4)).toBe(-3)
+    })
 })
 
