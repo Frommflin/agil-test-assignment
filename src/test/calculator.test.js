@@ -11,5 +11,14 @@ describe('testing calculator functions', () => {
     test('adding two numbers', () => { 
         expect(calc.add(2,4)).toBe(6)
     })
+    test('subtracting a from b', () => { 
+        expect(calc.subtract(10,4)).toBe(6)
+    })
+    test('multiplying two numbers', () => { 
+        expect(calc.multiply(2,4)).toBe(8)
+    })
+    test('dividing a with b', () => { 
+        expect(calc.divide(8,4)).toBe(2)
+    })
 })
 
