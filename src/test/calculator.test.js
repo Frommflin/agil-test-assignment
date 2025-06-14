@@ -23,5 +23,8 @@ describe('testing calculator functions', () => {
     test('subtracting a from b with a < b', () => { 
         expect(calc.subtract(1,4)).toBe(-3)
     })
+    test('dividing with 0', () => { 
+        expect(calc.divide(8,0)).toBe("can't divide with 0")
+    })
 })
 
