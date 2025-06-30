@@ -1,4 +1,5 @@
 import Header from './components/Header/Header'
+import FormPage from './pages/FormPage'
 import ListPage from './pages/ListPage'
 
 function App() {
@@ -6,7 +7,11 @@ function App() {
   return (
     <>
       <Header/>
-      <ListPage/>
+      <div className='page'>
+        {/* <ListPage/> */}
+        <FormPage/>
+      </div>
+      
     </>
   )
 }

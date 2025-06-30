@@ -22,3 +22,31 @@ body {
 .page {
   margin-left: 20px;
 }
+
+button{
+  font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: lightblue;
+  color: white;
+}
+
+.inputField {
+  margin-bottom: 20px;
+}
+.inputField label{
+  font-weight: bold;
+}
+.inputField input{
+  color: dimgrey;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border-color: lightblue;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+}
+.inputField input:last-child{
+  margin-bottom: 0;
+}
