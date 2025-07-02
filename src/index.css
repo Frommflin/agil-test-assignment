@@ -50,3 +50,17 @@ button{
 .inputField input:last-child{
   margin-bottom: 0;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  font-weight: bold;
+  transition: 1000ms;
+}
+
+.btn{
+  margin-bottom: 10px;
+}

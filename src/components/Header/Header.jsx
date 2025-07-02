@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import styles from './header.module.sass'
 
 const Header = () => {
@@ -7,8 +8,8 @@ const Header = () => {
       <div id={styles.title}>Tower of Movies</div>
       <nav>
         <ul>
-          <li>Filmer</li>
-          <li>Logga in</li>
+          <li><NavLink to='/'>Filmer</NavLink></li>
+          <li><NavLink to='/login'>Logga in</NavLink></li>
         </ul>
       </nav>
     </div>

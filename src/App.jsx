@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
 import FormPage from './pages/FormPage'
 import ListPage from './pages/ListPage'
@@ -9,9 +10,11 @@ function App() {
     <>
       <Header/>
       <div className='page'>
-        {/* <ListPage/> */}
-        {/* <FormPage/> */}
-        <LoginPage/>
+        <Routes>
+          <Route exact path='/' element={<ListPage/>}></Route>
+          <Route path='/newmovie' element={<FormPage/>}></Route>
+          <Route path='/login' element={<LoginPage/>}></Route>
+        </Routes>
       </div>
       
     </>
