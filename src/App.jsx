@@ -3,11 +3,12 @@ import Header from './components/Header/Header'
 import FormPage from './pages/FormPage'
 import ListPage from './pages/ListPage'
 import LoginPage from './pages/LoginPage'
+import ToMProvider from './providers/ToMProvider'
 
 function App() {
 
   return (
-    <>
+    <ToMProvider>
       <Header/>
       <div className='page'>
         <Routes>
@@ -16,8 +17,7 @@ function App() {
           <Route path='/login' element={<LoginPage/>}></Route>
         </Routes>
       </div>
-      
-    </>
+    </ToMProvider>
   )
 }
 
