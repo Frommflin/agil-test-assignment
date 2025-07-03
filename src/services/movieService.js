@@ -18,3 +18,16 @@ export const createMovie = async (title,director,productionYear,description) => 
   })
   return await response.json()
 }
+
+export const getMovies = async () => {
+  const url = 'https://tokenservice-jwt-2025.fly.dev/movies'
+  const jwt = localStorage.getItem('user')
+
+  const response = await fetch(url, {
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${jwt}`
+    }
+  })
+  return await response.json()
+}

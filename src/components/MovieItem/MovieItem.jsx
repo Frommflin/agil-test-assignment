@@ -1,22 +1,16 @@
 import React from 'react'
 import styles from './movieitem.module.sass'
 
-const MovieItem = () => {
+const MovieItem = ({title, director, year, description}) => {
   return (
     <div className={styles.card}>
-      <h3>Title</h3>
-      <div className={styles.label}>Director: Name</div>
-      <div className={styles.label}>Released in (year)</div>
-      <h4 className={styles.label}>Description</h4>
-      <div>Description text</div>
+      <h3>{title}</h3>
+      <div className={styles.label}>Reggisör: {director}</div>
+      <div className={styles.label}>Utgivningsår: {year}</div>
+      <h4 className={styles.label}>Beskrivning</h4>
+      <div>{description}</div>
     </div>
   )
 }
 
 export default MovieItem
-
-// "title": "The life of John Doe",
-// "director": "John Doe Thats his name",
-// "description": "Describes the extraordinary life of John Doe.",
-// "productionYear": 2000,
-// "id": 2
