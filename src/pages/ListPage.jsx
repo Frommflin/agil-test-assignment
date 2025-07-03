@@ -5,11 +5,11 @@ import MovieItem from '../components/MovieItem/MovieItem'
 import { NavLink } from 'react-router-dom'
 
 const ListPage = () => {
-  const {loggedIn} = useContext(ToMContext)
+  const {token} = useContext(ToMContext)
 
   return (<div>
     <h1>Dina Filmer</h1>
-    {loggedIn ? (
+    {token != '' ? (
       <div>
         <button className='btn'><NavLink to='/newmovie'>Lägg till ny film</NavLink></button>
         <div id={styles.movies}>

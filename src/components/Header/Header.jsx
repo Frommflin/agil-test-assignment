@@ -4,15 +4,15 @@ import { ToMContext } from '../../providers/ToMProvider'
 import styles from './header.module.sass'
 
 const Header = () => {
-  const {loggedIn,changeLogState} = useContext(ToMContext)
+  const {token, changeToken} = useContext(ToMContext)
   return (<>
     <div id={styles.header}>
       <div id={styles.title}>Tower of Movies</div>
       <nav>
         <ul>
           <li><NavLink to='/'>Filmer</NavLink></li>
-          {loggedIn ? (
-            <li><a href='#' onClick={()=>changeLogState()}>Logga ut</a></li>
+          {token != '' ? (
+            <li><a href='#' onClick={()=>changeToken('')}>Logga ut</a></li>
           ) : (
             <li><NavLink to='/login'>Logga in</NavLink></li>
           )}

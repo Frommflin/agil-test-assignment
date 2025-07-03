@@ -2,11 +2,11 @@ import { createContext, useState } from 'react'
 export const ToMContext = createContext()
 
 const ToMProvider = (props) => {
-  const [loggedIn, setLoggedIn] = useState(false)
-  const changeLogState = () => {setLoggedIn(!loggedIn)}
+  const [token, setToken] = useState('')
+  const changeToken = (val) => {setToken(val)}
 
   return (
-    <ToMContext.Provider value = {{loggedIn, changeLogState}}>
+    <ToMContext.Provider value = {{token, changeToken}}>
       {props.children}
     </ToMContext.Provider>
   )
