@@ -1,11 +1,11 @@
 import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  http.post('URL', async ({ request }) => {
+  http.post('https://tokenservice-jwt-2025.fly.dev/token-service/v1/request-token', async ({ request }) => {
     //Collecting login details from component
     const {username,password} = await request.json()
 
-    if(username == 'Klara' && password == 'havefuncodeing123'){
+    if(username == 'klara@example.com' && password == 'havefuncodeing123'){
       return new HttpResponse('mocked-jwt', {
         status: 200,
         headers: {
@@ -20,7 +20,7 @@ export const handlers = [
     }
   }),
 
-  http.get('URL', ({ request }) => {
+  http.get('https://tokenservice-jwt-2025.fly.dev/movies', ({ request }) => {
     //get auth header
     const authHeader = request.headers.get('Authorization')
 
